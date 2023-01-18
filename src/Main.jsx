@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 
 const Main = () => {
     const [temp, setTemp] = useState({
-        "celcius": "",
+        "celsius": "",
         "fahrenheit": "",
         "kelvin": ""
     });
@@ -17,11 +17,11 @@ const Main = () => {
         // })
 
         switch (name) {
-            case "celcius": {
+            case "celsius": {
                 if (value === "") {
                     setTemp((prevState) => {
                         return {
-                            "celcius": "",
+                            "celsius": "",
                             "fahrenheit": "",
                             "kelvin": ""
                         }
@@ -33,7 +33,7 @@ const Main = () => {
                     const f = c * (9.0 / 5) + 32;
                     setTemp((prevState) => {
                         return {
-                            "celcius": c,
+                            "celius": c,
                             "fahrenheit": f,
                             "kelvin": k
                         }
@@ -46,7 +46,7 @@ const Main = () => {
                     setTemp((prevState) => {
                         return {
                             "fahrenheit": "",
-                            "celcius": "",
+                            "celsius": "",
                             "kelvin": ""
                         }
                     });
@@ -58,7 +58,7 @@ const Main = () => {
                     setTemp((prevState) => {
                         return {
                             "fahrenheit": f,
-                            "celcius": c,
+                            "celsius": c,
                             "kelvin": k
                         }
                     });
@@ -70,7 +70,7 @@ const Main = () => {
                     setTemp((prevState) => {
                         return {
                             "kelvin": "",
-                            "celcius": "",
+                            "celsius": "",
                             "fahrenheit": ""
                         }
                     });
@@ -82,7 +82,7 @@ const Main = () => {
                     setTemp((prevState) => {
                         return {
                             "kelvin": k,
-                            "celcius": c,
+                            "celsius": c,
                             "fahrenheit": f
                         }
                     });
@@ -96,7 +96,7 @@ const Main = () => {
 
     return (
         <section className="temp">
-            <input type="number" placeholder="Celcius" name="celcius" value={temp.celcius} onChange={handleChange} />
+            <input type="number" placeholder="celsius" name="celsius" value={temp.celsius} onChange={handleChange} />
 
             <input type="number" placeholder="Fahrenheit" name="fahrenheit" value={temp.fahrenheit} onChange={handleChange} />
 
